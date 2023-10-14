@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+
+  
+    <web-view src="https://app.juramaia.com/" style="width: 100vw; height: 100px;"></web-view>
+  
+
+</view>

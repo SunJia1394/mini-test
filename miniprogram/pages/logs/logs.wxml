@@ -1,0 +1,26 @@
+<!--logs.wxml-->
+<!-- <view class="container log-list">
+  <block wx:for="{{logs}}" wx:key="timeStamp" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log.date}}</text>
+  </block>
+</view> -->
+
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+<van-uploader file-list="{{ fileList }}"  max-count="1"    bind:after-read="afterRead"/>
+<block wx:for="{{data}}" wx:key="*this" wx:for-item="item">
+  <view class='card' bindtap="handleCardTap">
+    <image class="avatar" src="{{item.avatarPath}}" bindtap="handleAvatarTap"></image>
+    <text class="name">{{item.avatarName}}</text>
+    <view class="pic">
+      <image class="image" src="{{item.imageUrl}}"></image>
+    </view>
+    <text class="brief">{{item.brief}}</text>
+    <view class="footer">
+      <text class="time">{{item.comments}} 分钟前</text>
+      <view class="favorite" bindtap="handleFavoriteTap">
+        <text>喜欢：{{item.likes}}</text>
+      </view>
+    </view>
+  </view>
+</block>
+

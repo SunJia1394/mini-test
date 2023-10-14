@@ -1,0 +1,44 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
+.card {
+  margin: 10px 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ccc;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.name {
+  /* 样式属性需要按你的需求进行设定 */
+}
+.pic {
+  margin-top: 16px;
+  border-radius: 12px;
+}
+.image {
+  width: 100%;
+  border-radius: 12px;
+}
+.brief {
+  margin-top: 8px;
+  /* 样式属性需要按你的需求进行设定 */
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.time {
+  /* 样式属性需要按你的需求进行设定 */
+}
+.favorite {
+  /* 样式属性需要按你的需求进行设定 */
+}
