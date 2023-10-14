@@ -3,42 +3,63 @@
   flex-direction: column;
   padding: 40rpx;
 }
+
 .log-item {
   margin: 10rpx;
 }
+
 .card {
   margin: 10px 20px;
   padding: 20px;
   border-radius: 12px;
   background: #ccc;
 }
+
 .avatar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
+
 .name {
   /* 样式属性需要按你的需求进行设定 */
 }
+
 .pic {
   margin-top: 16px;
   border-radius: 12px;
 }
+
 .image {
   width: 100%;
-  border-radius: 12px;
 }
+
+.cardTitle{
+  display: flex;   /* 开启 Flex 布局 */
+  align-items: center;  /* 上下居中 */
+  gap: 5px;
+}
+
 .brief {
   margin-top: 8px;
   /* 样式属性需要按你的需求进行设定 */
 }
+
 .footer {
   display: flex;
   justify-content: space-between;
 }
+
 .time {
   /* 样式属性需要按你的需求进行设定 */
 }
+
 .favorite {
   /* 样式属性需要按你的需求进行设定 */
+}
+
+.sendImage {
+  position: fixed;   /* 定义位置为固定位 */
+  right:10px;     /* 与屏幕右侧距离为0 */
+  bottom: 30px;    /* 与屏幕底部距离为0 */
 }

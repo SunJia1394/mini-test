@@ -2,6 +2,9 @@
   "navigationBarTitleText": "查看启动日志",
   "usingComponents": {
     "van-search": "@vant/weapp/search/index",
-    "van-uploader": "@vant/weapp/uploader/index"
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index"
   }
 }

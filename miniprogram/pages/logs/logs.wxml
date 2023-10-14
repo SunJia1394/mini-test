@@ -6,14 +6,24 @@
 </view> -->
 
 <van-search value="{{ value }}" placeholder="请输入搜索关键词" />
-<van-uploader file-list="{{ fileList }}"  max-count="1"    bind:after-read="afterRead"/>
+
+<van-uploader file-list="{{ fileList }}" max-count="1" bind:after-read="afterRead" class="sendImage">
+  <van-button round color="#724F44">
+    <van-icon name="comment" />
+  </van-button>
+</van-uploader>
+
 <block wx:for="{{data}}" wx:key="*this" wx:for-item="item">
   <view class='card' bindtap="handleCardTap">
-    <image class="avatar" src="{{item.avatarPath}}" bindtap="handleAvatarTap"></image>
-    <text class="name">{{item.avatarName}}</text>
-    <view class="pic">
-      <image class="image" src="{{item.imageUrl}}"></image>
+    <view class="cardTitle">
+      <image class="avatar" src="{{item.avatarPath}}" bindtap="handleAvatarTap"></image>
+      <text class="name">{{item.avatarName}}</text>
     </view>
+
+    <view class="pic">
+      <van-image width="80vw" height="80vw" fit="cover" src="{{item.imageUrl}}" />
+    </view>
+
     <text class="brief">{{item.brief}}</text>
     <view class="footer">
       <text class="time">{{item.comments}} 分钟前</text>
@@ -23,4 +33,3 @@
     </view>
   </view>
 </block>
-
