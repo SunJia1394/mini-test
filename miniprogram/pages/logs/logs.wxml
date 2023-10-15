@@ -8,7 +8,7 @@
 <van-search value="{{ value }}" placeholder="请输入搜索关键词" />
 
 <van-uploader file-list="{{ fileList }}" max-count="1" bind:after-read="afterRead" class="sendImage">
-  <van-button round color="#724F44">
+  <van-button round color="#724F44" class="sendImageBtn">
     <van-icon name="comment" />
   </van-button>
 </van-uploader>

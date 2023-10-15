@@ -17,9 +17,9 @@ const token = "Bearer 23bdc938023098ef06cc489fb79888927a382533433368757012784fbc
 Page({
   data: {
     data: [{
-      avatarPath: 'https://th.bing.com/th?id=OIP.RoNHAE_HE9e8rOdgDDPoPgHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2', // 需要你自己填充数据
+      avatarPath: 'https://img.midjourneyapi.xyz/mj/3d3a0831-76df-4f48-aa9c-2a344cb0a643.png', // 需要你自己填充数据
       avatarName: '奥比',
-      imageUrl: 'https://th.bing.com/th?id=OIP.RoNHAE_HE9e8rOdgDDPoPgHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2',
+      imageUrl: 'https://img.midjourneyapi.xyz/mj/3d3a0831-76df-4f48-aa9c-2a344cb0a643.png',
       comments: 0,
       likes: 0,
     }],
@@ -86,7 +86,9 @@ Page({
           console.log(res.data.output);
           setTimeout(() => {
             // @ts-ignore
-            getGenerate(data.output || "")
+            postTell(data.output || "")
+            // @ts-ignore
+            getGenerate(data.output || "");
           }, 2000)
 
         },
@@ -94,6 +96,29 @@ Page({
           console.error("创建失败:", error);
         },
       });
+    }
+
+    const postTell = (tell: string)=>{
+      wx.request({
+        url: 'https://aisoul.juramaia.com/tell', // 更改为你的实际接口地址
+        method: 'POST',
+        data: {
+          message: tell, // 这里填写你需要发送的字符串
+        },
+        timeout: 300000,
+        header: {
+          'content-type': 'application/json'
+        },
+        success(res) {
+          const data = res.data;
+          // @ts-ignore
+          console.log(res.data);
+        },
+        fail(error) {
+          console.error("创建失败:", error);
+        },
+      });
+    
     }
 
     const getGenerate = (analyze: string) => {

@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "查看启动日志",
+  "navigationBarTitleText": "卡片",
   "usingComponents": {
     "van-search": "@vant/weapp/search/index",
     "van-uploader": "@vant/weapp/uploader/index",

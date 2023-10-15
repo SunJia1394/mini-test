@@ -59,7 +59,13 @@
 }
 
 .sendImage {
+  z-index: 999;
   position: fixed;   /* 定义位置为固定位 */
   right:10px;     /* 与屏幕右侧距离为0 */
   bottom: 30px;    /* 与屏幕底部距离为0 */
+}
+
+.sendImageBtn{
+  width: 20vw;
+  height: 20vw;
 }
